@@ -1,0 +1,6 @@
+#@data/values-schema
+---
+#@schema/desc "Namespace to deploy"
+namespace: app-acme-fitness
+#@schema/desc "FQDN"
+fqdn: acme-fitness.foo.org

@@ -3,29 +3,65 @@ apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
     kbld.carvel.dev/id: bitnami/redis
-  image: index.docker.io/bitnami/redis@sha256:ad721b384581feffa01f613acba3e05919b7a60a1f39bdd0607258965cbd6e6b
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: bitnami/redis
+  image: index.docker.io/bitnami/redis@sha256:d3aba9cfd18ff44820bed411b3cb6314ba5189cdf23f41ac4aa6113123e58108
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-cart:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-cart:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-cart@sha256:9e3eb249f3ad58997248c31872175270aa54065f141f3e5de6455ce7e3804ce2
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-catalog:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-catalog:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-catalog@sha256:8fd8df19f3793e901f0e79d809b6d07d964cace9c203510b832a47393c3fc804
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-front-end:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-front-end:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-front-end@sha256:7e98287b06bcda9b19ce5be45a012bc19505724b89c4afe17e130c8b7b0223bc
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-order:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-order:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-order@sha256:0349106521d476e8a833088c33f6db5ac4c898f00d1b6b6f15d9902ff5fdd0f4
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-payment:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-payment:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-payment@sha256:2d4b798b3e0651cadb00c2568fec841f4008bfd5ac976a0c0e8553e4923ef70c
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-user:latest
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: latest
+          url: gcr.io/vmwarecloudadvocacy/acmeshop-user:latest
   image: gcr.io/vmwarecloudadvocacy/acmeshop-user@sha256:dc95f357f226415aced988a213fb5c1e45e1a6d202e38e2951a4618e14222dc2
 - annotations:
     kbld.carvel.dev/id: mongo:4
-  image: index.docker.io/library/mongo@sha256:967fecde146a0d1ac5ec5805a2c759066b6b94d6fb3977e22292c1d58df244e3
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: "4"
+          url: mongo:4
+  image: index.docker.io/library/mongo@sha256:55d463d6688bf2e16262a071d4df3841c0de63f90f8a5cc1b0107ec3d0f0f241
 - annotations:
     kbld.carvel.dev/id: postgres:9.5
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: "9.5"
+          url: postgres:9.5
   image: index.docker.io/library/postgres@sha256:75ebf479151a8fd77bf2fed46ef76ce8d518c23264734c48f2d1de42b4eb40ae
 kind: ImagesLock

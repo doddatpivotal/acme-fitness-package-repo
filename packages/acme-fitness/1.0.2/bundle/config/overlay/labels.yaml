@@ -1,0 +1,9 @@
+#@ load("@ytt:overlay", "overlay")
+
+#@overlay/match by=overlay.all, expects="1+"
+---
+metadata:
+  labels:
+    blk.com/client: #@ data.values.client
+    blk.com/region: #@ data.values.region
+    blk.com/app: app-3-acme-fitness

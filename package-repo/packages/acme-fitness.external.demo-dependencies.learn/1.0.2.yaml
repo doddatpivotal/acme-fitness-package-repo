@@ -1,12 +1,12 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: acme-fitness.external.demo-dependencies.learn.1.0.1
+  name: acme-fitness.external.demo-dependencies.learn.1.0.2
 spec:
   refName: acme-fitness.external.demo-dependencies.learn
-  version: 1.0.1
+  version: 1.0.2
   releaseNotes: |
-    Page release of the acme-fitness package, changing products to include AI capabilities.
+    Page release of the acme-fitness package, adding labels.
   valuesSchema:
     openAPIv3:
       type: object
@@ -26,7 +26,7 @@ spec:
       - git:
           url: https://github.com/doddatpivotal/acme-fitness-package-repo
           ref: origin/main
-          subPath: packages/acme-fitness/1.0.1/bundle
+          subPath: packages/acme-fitness/1.0.2/bundle
       template:
       - ytt:
           paths:
