@@ -1,3 +1,6 @@
+#@ load("@ytt:data", "data")
+
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -12,7 +15,7 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 3000
-#      nodePort: 30430
+#!      nodePort: 30430
   selector:
     app: acmefit
     service: frontend

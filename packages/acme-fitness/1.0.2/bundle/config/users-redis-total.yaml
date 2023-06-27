@@ -1,3 +1,6 @@
+#@ load("@ytt:data", "data")
+
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,13 +28,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: acmefit  # has to match .spec.template.metadata.labels
+      app: acmefit  #! has to match .spec.template.metadata.labels
       service: users-redis
   replicas: 1
   template:
     metadata:
       labels:
-        app: acmefit  # has to match .spec.selector.matchLabels
+        app: acmefit  #! has to match .spec.selector.matchLabels
         service: users-redis
     spec:
       containers:
@@ -57,14 +60,14 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/redis
               name: users-redis-data
-#            - mountPath: /etc/redis
-#              name: redis-config
+#!            - mountPath: /etc/redis
+#!              name: redis-config
       volumes:
         - name: users-redis-data
           emptyDir: {}
-#        - name: redis-config
-#          configMap:
-#            name: redis-config
-#            items:
-#              - key: redis-config
-#                path: redis.conf
+#!        - name: redis-config
+#!          configMap:
+#!            name: redis-config
+#!            items:
+#!              - key: redis-config
+#!                path: redis.conf

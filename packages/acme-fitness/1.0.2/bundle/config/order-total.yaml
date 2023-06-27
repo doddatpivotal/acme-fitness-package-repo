@@ -1,3 +1,6 @@
+#@ load("@ytt:data", "data")
+
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -42,7 +45,7 @@ spec:
         emptyDir: {}
       containers:
       - image: gcr.io/vmwarecloudadvocacy/acmeshop-order:latest
-        # orderpostgres:latest
+        #! orderpostgres:latest
         name: order
         env:
         - name: ORDER_DB_HOST
