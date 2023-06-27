@@ -4,3 +4,7 @@
 namespace: app-acme-fitness
 #@schema/desc "FQDN"
 fqdn: acme-fitness.foo.org
+#@schema/desc "Region"
+region: east
+#@schema/desc "Client"
+client: client-0

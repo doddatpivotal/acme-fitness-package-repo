@@ -20,6 +20,14 @@ spec:
           type: string
           description: FQDN
           default: acme-fitness.foo.org
+        region:
+          type: string
+          description: Region
+          default: east
+        client:
+          type: string
+          description: Client
+          default: client-0
   template:
     spec:
       fetch:
