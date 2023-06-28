@@ -41,8 +41,6 @@ spec:
       containers:
         - name: users-mongo
           image: mongo:4
-          resources:
-            {}
           ports:
             - name: users-mongo
               containerPort: 27017
