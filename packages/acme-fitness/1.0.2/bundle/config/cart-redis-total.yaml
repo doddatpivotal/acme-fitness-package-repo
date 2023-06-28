@@ -42,17 +42,13 @@ spec:
         - name: cart-redis
           image: bitnami/redis
           imagePullPolicy: Always
-          resources:
-            requests:
-              cpu: "100m"
-              memory: "100Mi"
           ports:
             - name: redis
               containerPort: 6379
               protocol: "TCP"
           resources:
             requests:
-              memory: "64Mi"
+              memory: "100Mi"
               cpu: "100m"
             limits:
               memory: "256Mi"
