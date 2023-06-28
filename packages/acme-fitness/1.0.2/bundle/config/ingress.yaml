@@ -19,7 +19,7 @@ spec:
 #!    hosts:
 #!    - data.values.fqdn
   rules:
-  - host: #@ data.values.fqdn
+  - host: #@ "acme-fitness." + data.values.fqdn
     http:
       paths:
       - pathType: Prefix
