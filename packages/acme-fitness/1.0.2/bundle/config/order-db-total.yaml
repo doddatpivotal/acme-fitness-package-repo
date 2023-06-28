@@ -51,6 +51,13 @@ spec:
         - containerPort: 5432
           name: order-postgres
           protocol: "TCP"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         env:
         - name: POSTGRES_USER
           value: pgbench

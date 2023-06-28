@@ -72,3 +72,10 @@ spec:
         ports:
         - containerPort: 3000
           name: frontend
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

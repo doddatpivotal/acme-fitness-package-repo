@@ -57,3 +57,10 @@ spec:
         ports:
         - containerPort: 9000
           name: payment
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
