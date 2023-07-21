@@ -1,0 +1,10 @@
+#@data/values-schema
+---
+#@schema/desc "Namespace to deploy"
+namespace: app-acme-fitness
+#@schema/desc "FQDN"
+fqdn: foo.org
+#@schema/desc "Region"
+region: east
+#@schema/desc "Client"
+client: client-0

@@ -1,0 +1,31 @@
+#@ load("@ytt:data", "data")
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend
+  namespace: default
+  labels:
+    app: acmefit
+  annotations:
+#!    cert-manager.io/cluster-issuer: letsencrypt-contour-cluster-issuer
+#!    ingress.kubernetes.io/force-ssl-redirect: "true"
+#!    kubernetes.io/ingress.class: contour
+#!    kubernetes.io/tls-acme: "true"
+spec:
+#!  tls:
+#!  - secretName: acme-fitness-tls
+#!    hosts:
+#!    - data.values.fqdn
+  rules:
+  - host: #@ "acme-fitness." + data.values.fqdn
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+           name: frontend
+           port:
+             number: 80

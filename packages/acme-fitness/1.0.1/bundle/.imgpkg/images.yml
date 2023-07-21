@@ -7,7 +7,7 @@ images:
       - resolved:
           tag: latest
           url: bitnami/redis
-  image: index.docker.io/bitnami/redis@sha256:d3aba9cfd18ff44820bed411b3cb6314ba5189cdf23f41ac4aa6113123e58108
+  image: index.docker.io/bitnami/redis@sha256:eb57b3dcd12b1308cc1030725c6dbd85587d85328098a2f7d74c75866d5a9cd1
 - annotations:
     kbld.carvel.dev/id: gcr.io/vmwarecloudadvocacy/acmeshop-cart:latest
     kbld.carvel.dev/origins: |
@@ -56,7 +56,7 @@ images:
       - resolved:
           tag: "4"
           url: mongo:4
-  image: index.docker.io/library/mongo@sha256:55d463d6688bf2e16262a071d4df3841c0de63f90f8a5cc1b0107ec3d0f0f241
+  image: index.docker.io/library/mongo@sha256:e0dc28ed5e0d6340c6f3def017cf0ae6078dbd155f97f643105b11a24f54cadf
 - annotations:
     kbld.carvel.dev/id: postgres:9.5
     kbld.carvel.dev/origins: |
